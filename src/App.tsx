@@ -1,25 +1,40 @@
-import { AppShell, Burger } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { AppShell, Center, Group, Paper, Title } from '@mantine/core';
+import { useState } from 'react';
+import LiveCam from './components/LiveCam';
+import ResortNavBar from './components/ResortNavBar';
 
-function App() {
-  const [opened, { toggle }] = useDisclosure();
+export function App() {
+
+  const [resort, setResort] = useState<string>('');
+
+  function handleResortSelect(resort: string) {
+    setResort(resort)
+  }
 
   return (
     <AppShell
       header={{ height: 60 }}
+      navbar={{
+        width: 125,
+        breakpoint: "xs"
+      }}
       padding="md"
     >
       <AppShell.Header>
-        <Burger
-          opened={opened}
-          onClick={toggle}
-          hiddenFrom="sm"
-          size="sm"
-        />
-        <div>Logo</div>
+        <Center>
+          <Title>Utah Ski Reports</Title>
+        </Center>
       </AppShell.Header>
 
-      <AppShell.Main>Main</AppShell.Main>
+      <AppShell.Navbar p="md">
+        <ResortNavBar onResortSelect={handleResortSelect}/>
+      </AppShell.Navbar>
+
+      <AppShell.Main>
+        <Group>
+          <LiveCam resort={resort} />
+        </Group>
+      </AppShell.Main>
     </AppShell>
   );
 }
