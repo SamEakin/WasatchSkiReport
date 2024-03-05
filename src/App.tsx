@@ -2,6 +2,7 @@ import { AppShell, Center, Group, Paper, Title } from '@mantine/core';
 import { useState } from 'react';
 import LiveCam from './components/LiveCam';
 import ResortNavBar from './components/ResortNavBar';
+import WeatherReport from './components/WeatherReport';
 
 export function App() {
 
@@ -31,8 +32,11 @@ export function App() {
       </AppShell.Navbar>
 
       <AppShell.Main>
-        <Group>
+        <Group justify='center'>
           <LiveCam resort={resort} />
+        </Group>
+        <Group justify='center'>
+          <WeatherReport resort={resort} />
         </Group>
       </AppShell.Main>
     </AppShell>
