@@ -5,7 +5,7 @@ type ResortNavBarProps = {
 };
 
 export default function ResortNavBar({ onResortSelect }: ResortNavBarProps){
-    const resorts: string[] = ['Alta', 'Brighton', 'Snowbird', 'Solitude', 'Deer Valley', 'Park City']
+    const resorts: string[] = ['Alta', 'Brighton', 'Solitude', 'Deer Valley', 'Park City', 'Snowbird']
     
     return (
         resorts.map((resort) =>

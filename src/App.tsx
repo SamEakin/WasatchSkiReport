@@ -23,7 +23,7 @@ export function App() {
     >
       <AppShell.Header>
         <Center>
-          <Title>Utah Ski Reports</Title>
+          <Title>Wasatch Ski Reports</Title>
         </Center>
       </AppShell.Header>
 

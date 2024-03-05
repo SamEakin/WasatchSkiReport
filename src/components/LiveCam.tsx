@@ -10,8 +10,11 @@ export default function LiveCam({ resort }: LiveCamProps) {
         switch (resort) {
             case 'Brighton':
                 urls = [
-                    "https://www.youtube.com/embed/iq-CT8UQzgo?si=toe60D52-jmCPsac&amp;controls=0&amp;autoplay=1", 
-                    "https://www.youtube.com/embed/YDyBL3bXOwA?si=XjvA0VDVGj_CPdBM&amp;controls=0&amp;autoplay=1"]
+                    "https://www.youtube.com/embed/iq-CT8UQzgo?si=toe60D52-jmCPsac&amp;controls=0&amp;autoplay=1",
+                    "https://www.youtube.com/embed/s1i1Si4heiU?si=Krd3ZE8gKvzcZ9w6&amp;controls=0&amp;autoplay=1",
+                    "https://www.youtube.com/embed/XLzKPufaAts?si=ZJ8A1sjcidiJLNOP&amp;controls=0&amp;autoplay=1",
+                    "https://www.youtube.com/embed/YDyBL3bXOwA?si=XjvA0VDVGj_CPdBM&amp;controls=0&amp;autoplay=1",
+                    "https://www.youtube.com/embed/q_tgKYEnCa0?si=567uhQCyn-diI0CM&amp;controls=0&amp;autoplay=1"]
                 break
             case 'Solitude':
                 urls = [
