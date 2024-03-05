@@ -45,7 +45,7 @@ export default function LiveCam({ resort }: LiveCamProps) {
     
     // ToDo: Snowbird should probably be a different component
     if (resort === 'Snowbird') {
-        const url = "https://www.youtube.com/embed/UsewAQoJWXo?si=nJJ1iojQCwaU-ymB&amp;controls=0&amp;autoplay=1"
+        const url = "https://www.youtube.com/embed/UsewAQoJWXo?si=nJJ1iojQCwaU-ymB&amp;controls=0&amp;autoplay=1&mute=1"
         return (
             <>
                 <Stack justify="center">
