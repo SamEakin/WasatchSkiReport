@@ -1,4 +1,4 @@
-import { Anchor, Group, Stack } from "@mantine/core";
+import { Anchor, Stack } from "@mantine/core";
 
 type LiveCamProps = {
     resort: string
