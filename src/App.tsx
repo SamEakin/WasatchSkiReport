@@ -1,4 +1,4 @@
-import { AppShell, Center, Group, Paper, Title } from '@mantine/core';
+import { AppShell, Center, Group, Title } from '@mantine/core';
 import { useState } from 'react';
 import LiveCam from './components/LiveCam';
 import ResortNavBar from './components/ResortNavBar';
