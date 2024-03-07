@@ -1,8 +1,9 @@
-import { AppShell, Center, Group, Title } from '@mantine/core';
+import { AppShell, Group } from '@mantine/core';
 import { useState } from 'react';
 import LiveCam from './components/LiveCam';
 import ResortNavBar from './components/ResortNavBar';
 import WeatherReport from './components/WeatherReport';
+import HeaderComponent from './components/HeaderComponent';
 
 export function App() {
 
@@ -22,9 +23,7 @@ export function App() {
       padding="md"
     >
       <AppShell.Header>
-        <Center>
-          <Title>Wasatch Ski Reports</Title>
-        </Center>
+        <HeaderComponent resort={resort} />
       </AppShell.Header>
 
       <AppShell.Navbar p="md">
