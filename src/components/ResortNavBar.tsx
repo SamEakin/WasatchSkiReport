@@ -16,7 +16,7 @@ export default function ResortNavBar({ onResortSelect }: ResortNavBarProps){
     }
 
     return (
-        resorts.map((resort, index) =>
+        resorts.map((resort) =>
             <NavLink
                 href={`#${resort}`}
                 label={resort}
