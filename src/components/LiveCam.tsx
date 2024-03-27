@@ -37,7 +37,7 @@ export default function LiveCam({ resort }: LiveCamProps) {
                     "https://www.youtube.com/embed/_-jBmcnsK6s?si=MnoF9L7cTgyjdpn3&amp;controls=0&amp;autoplay=1"]
                 break
             case 'Park City':
-                urls = ["https://www.youtube.com/embed/kuyXQ_gUJUA?si=kUuwy6vV5sA-fGnramp;controls=0&amp;autoplay=1"]
+                urls = []
                 break
         }
         return urls

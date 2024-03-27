@@ -1,25 +1,24 @@
-import { AppShell, Group } from '@mantine/core';
+import { AppShell, Grid } from '@mantine/core';
 import { useState } from 'react';
 import LiveCam from './components/LiveCam';
 import ResortNavBar from './components/ResortNavBar';
 import WeatherReport from './components/WeatherReport';
 import HeaderComponent from './components/HeaderComponent';
 
+export type Resorts = 'Snowbird' | 'Alta' | 'Brighton' | 'Solitude' | 'Park City' | 'Deer Valley';
+
 export function App() {
 
-  const [resort, setResort] = useState<string>('');
+  const [resort, setResort] = useState<Resorts>('Snowbird');
 
-  function handleResortSelect(resort: string) {
+  function handleResortSelect(resort: Resorts) {
     setResort(resort)
   }
 
   return (
     <AppShell
       header={{ height: 60 }}
-      navbar={{
-        width: 125,
-        breakpoint: "xs"
-      }}
+      navbar={{ width: 125, breakpoint: "xs" }}
       padding="md"
     >
       <AppShell.Header>
@@ -31,12 +30,15 @@ export function App() {
       </AppShell.Navbar>
 
       <AppShell.Main>
-        <Group justify='center'>
-          <LiveCam resort={resort} />
-        </Group>
-        <Group justify='center'>
-          <WeatherReport resort={resort} />
-        </Group>
+          <Grid gutter='lg'>
+            <Grid.Col span={6}>
+              <WeatherReport resort={resort} />
+            </Grid.Col>
+
+            <Grid.Col offset={1} span={5}>
+              <LiveCam resort={resort} />
+            </Grid.Col>
+          </Grid>
       </AppShell.Main>
     </AppShell>
   );
