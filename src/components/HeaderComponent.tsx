@@ -1,11 +1,11 @@
 import { Image, Group, Title } from '@mantine/core';
 
-import alta from '../../public/icons/alta.png';
-import brighton from '../../public/icons/brighton.svg';
-import deer_valley from '../../public/icons/deer_valley.svg';
-import park_city from '../../public/icons/park_city.svg';
-import snowbird from '../../public/icons/snowbird.svg';
-import solitude from '../../public/icons/solitude.svg';
+import alta from '/icons/alta.png';
+import brighton from '/icons/brighton.svg';
+import deer_valley from '/icons/deer_valley.svg';
+import park_city from '/icons/park_city.svg';
+import snowbird from '/icons/snowbird.svg';
+import solitude from '/icons/solitude.svg';
 
 
 type HeaderComponentProps = {
