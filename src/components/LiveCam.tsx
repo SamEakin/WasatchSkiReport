@@ -44,19 +44,19 @@ export default function LiveCam({ resort }: LiveCamProps) {
     }
     
     // ToDo: Snowbird should probably be a different component
-    if (resort === 'Snowbird') {
-        const url = "https://www.youtube.com/embed/UsewAQoJWXo?si=nJJ1iojQCwaU-ymB&amp;controls=0&amp;autoplay=1&mute=1"
-        return (
-            <>
-                <Stack justify="center">
-                    <Anchor href="https://www.snowbird.com/mountain-report/#webcams" target="_blank" underline="hover">
-                        Live feeds only available on Snowbird's website.
-                    </Anchor>
-                    <iframe width="560" height="315" src={url} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-                </Stack>
-            </>
-        )
-    }
+    // if (resort === 'Snowbird') {
+    //     const url = "https://www.youtube.com/embed/UsewAQoJWXo?si=nJJ1iojQCwaU-ymB&amp;controls=0&amp;autoplay=1&mute=1"
+    //     return (
+    //         <>
+    //             <Stack justify="center">
+    //                 <Anchor href="https://www.snowbird.com/mountain-report/#webcams" target="_blank" underline="hover">
+    //                     Live feeds only available on Snowbird's website.
+    //                 </Anchor>
+    //                 <iframe width="560" height="315" src={url} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+    //             </Stack>
+    //         </>
+    //     )
+    // }
     return (
         liveCams(resort).map((url) => 
             <iframe width="560" height="315" src={url} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
