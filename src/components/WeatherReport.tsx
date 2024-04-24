@@ -1,4 +1,4 @@
-import { Skeleton, Table } from "@mantine/core";
+import { Table } from "@mantine/core";
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import { Resorts } from "src/App";
@@ -55,7 +55,7 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
         for (let i = 0; i < daily.time.length; i++){
             rows.push(
                 <Table.Tr key={i}>
-                    <Table.Td>{daily.time[i]}</Table.Td>
+                    <Table.Td>{i == 0 ? 'Today' : daily.time[i]}</Table.Td>
                     <Table.Td>{daily.snowfall_sum[i]}</Table.Td>
                 </Table.Tr>
             )
@@ -71,15 +71,15 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
      
     return (
         <Table>
-        <Table.Thead>
-          <Table.Tr>
-            <Table.Th>Day</Table.Th>
-            <Table.Th>Snowfall (inches)</Table.Th>
-          </Table.Tr>
-        </Table.Thead>
-        <Table.Tbody>
-            {snowfall(weather.daily)}
-        </Table.Tbody>
-      </Table>   
+            <Table.Thead>
+            <Table.Tr>
+                <Table.Th>Day</Table.Th>
+                <Table.Th>Snowfall (inches)</Table.Th>
+            </Table.Tr>
+            </Table.Thead>
+            <Table.Tbody>
+                {snowfall(weather.daily)}
+            </Table.Tbody>
+        </Table>   
     );
 }
