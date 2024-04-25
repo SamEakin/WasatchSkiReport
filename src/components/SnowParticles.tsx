@@ -50,7 +50,7 @@ export default function SnowParticles(){
                 value: 1,
             },
             size: {
-                value: 5,
+                value: 1,
             },
             move: {
                 enable: true,
