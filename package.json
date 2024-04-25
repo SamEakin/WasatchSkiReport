@@ -13,7 +13,12 @@
     "@mantine/core": "^7.5.1",
     "@mantine/form": "^7.5.1",
     "@mantine/hooks": "^7.5.1",
+    "@tsparticles/engine": "^3.3.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.3.0",
     "axios": "^1.6.7",
+    "install": "^0.13.0",
+    "npm": "^10.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

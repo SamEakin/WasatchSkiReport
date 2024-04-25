@@ -4,6 +4,7 @@ import LiveCam from './components/LiveCam';
 import ResortNavBar from './components/ResortNavBar';
 import WeatherReport from './components/WeatherReport';
 import HeaderComponent from './components/HeaderComponent';
+import SnowParticles from './components/SnowParticles';
 
 export type Resorts = 'Snowbird' | 'Alta' | 'Brighton' | 'Solitude' | 'Park City' | 'Deer Valley';
 
@@ -16,6 +17,7 @@ export function App() {
   }
 
   return (
+    <>
     <AppShell
       header={{ height: 60 }}
       navbar={{ width: 125, breakpoint: "xs" }}
@@ -41,6 +43,8 @@ export function App() {
           </Grid>
       </AppShell.Main>
     </AppShell>
+    <SnowParticles />
+    </>
   );
 }
 
