@@ -86,7 +86,7 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
         <Table>
             <Table.Thead>
             <Table.Tr>
-                <Table.Th>Day</Table.Th>
+                <Table.Th>Date</Table.Th>
                 <Table.Th>Snowfall (inches)</Table.Th>
             </Table.Tr>
             </Table.Thead>

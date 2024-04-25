@@ -57,7 +57,13 @@ export default function LiveCam({ resort }: LiveCamProps) {
     // }
     return (
         liveCams(resort).map((url) => 
-            <iframe width="560" height="315" src={url} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            <iframe 
+                width="560" 
+                height="315"
+                style={{position: "relative", zIndex: 1}} 
+                src={url} 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+            </iframe>
         )
     )
 };

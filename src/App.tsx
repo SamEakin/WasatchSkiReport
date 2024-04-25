@@ -1,4 +1,4 @@
-import { AppShell, Grid } from '@mantine/core';
+import { Anchor, AppShell, Container, Grid } from '@mantine/core';
 import { useState } from 'react';
 import LiveCam from './components/LiveCam';
 import ResortNavBar from './components/ResortNavBar';
@@ -42,6 +42,13 @@ export function App() {
             </Grid.Col>
           </Grid>
       </AppShell.Main>
+      <AppShell.Footer>
+        <Container>
+        <Anchor href="https://open-meteo.com/" target="_blank" underline="hover">
+          Weather data provided by Open-Meteo
+        </Anchor>
+        </Container>
+      </AppShell.Footer>
     </AppShell>
     <SnowParticles />
     </>
