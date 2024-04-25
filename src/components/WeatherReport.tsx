@@ -40,7 +40,7 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
 
     async function fetch7daySnowfall(latitude: number, longitude: number){
         try {
-            const endpoint = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=snowfall_sum&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch`
+            const endpoint = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=snowfall_sum&timezone=America%2FDenver&past_days=7&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch`
             const response = await axios.get(endpoint);
             const data = response.data as WeatherResponse;
             console.log(data)
@@ -50,12 +50,25 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
         }
     }
 
+    function snowfallDateLabels(index: number, date: string){
+        switch (index) {
+            case 6:
+                return 'Yesterday';
+            case 7:
+                return 'Today';
+            case 8:
+                return 'Tomorrow';
+            default:
+                return date;
+        }
+    }
+
     function snowfall(daily: WeatherResponse['daily']){
         let rows = [];
         for (let i = 0; i < daily.time.length; i++){
             rows.push(
                 <Table.Tr key={i}>
-                    <Table.Td>{i == 0 ? 'Today' : daily.time[i]}</Table.Td>
+                    <Table.Td>{snowfallDateLabels(i, daily.time[i])}</Table.Td>
                     <Table.Td>{daily.snowfall_sum[i]}</Table.Td>
                 </Table.Tr>
             )
@@ -78,7 +91,7 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
             </Table.Tr>
             </Table.Thead>
             <Table.Tbody>
-                {snowfall(weather.daily)}
+                { snowfall(weather.daily) }
             </Table.Tbody>
         </Table>   
     );

@@ -73,9 +73,6 @@ export default function SnowParticles(){
             //     velocityRate: 10,
             // },
         },
-        // background: {
-        //     color: "#333333",
-        // },
     };
 
     if (!init) return <></>;
