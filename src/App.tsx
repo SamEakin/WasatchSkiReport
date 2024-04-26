@@ -9,6 +9,14 @@ import InteractiveMap from './components/InteractiveMap';
 
 export type Coords = number[];
 export type Resorts = 'Snowbird' | 'Alta' | 'Brighton' | 'Solitude' | 'Park City' | 'Deer Valley';
+export const Coordinates: Record<Resorts, Coords> = {
+  'Snowbird': [40.5819, -111.6557],
+  'Alta': [40.5883, -111.6372],
+  'Brighton': [40.5997, -111.5844],
+  'Solitude': [40.6196, -111.5913],
+  'Park City': [40.6461, -111.4979],
+  'Deer Valley': [40.6375, -111.4783],
+}
 
 export function App() {
 
@@ -57,7 +65,7 @@ export function App() {
           </Container>
         </AppShell.Footer>
       </AppShell>
-      
+
       <SnowParticles />
     </>
   );

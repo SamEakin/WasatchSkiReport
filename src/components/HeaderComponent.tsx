@@ -39,12 +39,10 @@ export default function HeaderComponent({ resort }: HeaderComponentProps) {
     }
     
     return (
-        <>
-            <Group justify='center'>
-                <h2 style={{position: 'absolute', left: 10}}>Wasatch Ski Reports</h2>
-                <Image src={resortIcon(resort)} alt="resort" h='55'/>
-                <Title>{resort}</Title>
-            </Group>
-        </>
+        <Group justify='center'>
+            <h2 style={{position: 'absolute', left: 10}}>Wasatch Ski Reports</h2>
+            <Image src={resortIcon(resort)} alt="resort" h='55'/>
+            <Title>{resort}</Title>
+        </Group>
     );
 }

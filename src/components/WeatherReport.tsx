@@ -1,9 +1,8 @@
 import { Table } from "@mantine/core";
 import axios from 'axios';
 import { useEffect, useState } from "react";
-import { Resorts } from "src/App";
-
-type Coords = number[];
+import { Resorts, Coordinates } from "../App";
+import WeatherReportSnowfallRow from "./WeatherReportSnowfallRow";
 
 type WeatherResponse = {
     latitude: number,
@@ -26,19 +25,10 @@ type WeatherResponse = {
 type WeatherReportProps = {
     resort: Resorts
 };
-
 export default function WeatherReport({ resort }: WeatherReportProps) {
     const [weather, setWeather] = useState<WeatherResponse>();
-    const coordinates: Record<Resorts, Coords> = {
-        'Snowbird': [40.5819, -111.6557],
-        'Alta': [40.5883, -111.6372],
-        'Brighton': [40.5997, -111.5844],
-        'Solitude': [40.6196, -111.5913],
-        'Park City': [40.6461, -111.4979],
-        'Deer Valley': [40.6375, -111.4783],
-    }
 
-    async function fetch7daySnowfall(latitude: number, longitude: number){
+    async function fetch7daySnowfall(latitude: number, longitude: number) {
         try {
             const endpoint = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=snowfall_sum&timezone=America%2FDenver&past_days=7&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch`
             const response = await axios.get(endpoint);
@@ -50,49 +40,54 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
         }
     }
 
-    function snowfallDateLabels(index: number, date: string){
-        switch (index) {
-            case 6:
-                return 'Yesterday';
-            case 7:
-                return 'Today';
-            case 8:
-                return 'Tomorrow';
-            default:
-                return date;
-        }
-    }
-
-    function renderSnowfall(daily: WeatherResponse['daily']){
-        let rows = [];
-        for (let i = 0; i < daily.time.length; i++){
-            rows.push(
-                <Table.Tr key={i}>
-                    <Table.Td>{snowfallDateLabels(i, daily.time[i])}</Table.Td>
-                    <Table.Td>{daily.snowfall_sum[i]}</Table.Td>
-                </Table.Tr>
-            )
-        }
-        return rows;
+    function totalSnowfall(snowfall_sum: number[]): string {
+        console.log(snowfall_sum)
+        return snowfall_sum.reduce((a, b) => a + b, 0).toFixed(2)
     }
 
     useEffect(() => {
-        fetch7daySnowfall(coordinates[resort][0], coordinates[resort][1])
+        fetch7daySnowfall(Coordinates[resort][0], Coordinates[resort][1])
     }, [resort]);
 
     if (weather === undefined) return ('no weather data');
-     
+
     return (
-        <Table>
-            <Table.Thead> 
-            <Table.Tr>
-                <Table.Th>Date</Table.Th>
-                <Table.Th>Snowfall (inches)</Table.Th>
-            </Table.Tr>
-            </Table.Thead>
-            <Table.Tbody>
-                { renderSnowfall(weather.daily) }
-            </Table.Tbody>
-        </Table>   
+        <>
+            <Table>
+                <Table.Thead>
+                    <Table.Tr>
+                        <Table.Th>Elevation</Table.Th>
+                        <Table.Th>Latitude</Table.Th>
+                        <Table.Th>Longitude</Table.Th>
+                        <Table.Th>Snowfall Sum (last 7 days)</Table.Th>
+
+                    </Table.Tr>
+                </Table.Thead>
+                <Table.Tbody>
+                    <Table.Td>{weather.elevation}</Table.Td>
+                    <Table.Td>{weather.latitude}</Table.Td>
+                    <Table.Td>{weather.longitude}</Table.Td>
+                    <Table.Td>{totalSnowfall(weather.daily.snowfall_sum)}</Table.Td>
+                </Table.Tbody>
+            </Table>
+
+            <Table>
+                <Table.Thead>
+                    <Table.Tr>
+                        <Table.Th>Date</Table.Th>
+                        <Table.Th>Snowfall (inches)</Table.Th>
+                    </Table.Tr>
+                </Table.Thead>
+                <Table.Tbody>
+                    {
+                        weather.daily.time.map((time, index) => {
+                            const snowfall = weather.daily.snowfall_sum[index];
+                            return <WeatherReportSnowfallRow key={index} index={index} snowfall={snowfall} date={time} />
+                        })
+                    }
+                </Table.Tbody>
+            </Table>
+        </>
+
     );
 }
