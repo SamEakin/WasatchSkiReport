@@ -57,6 +57,7 @@ export function App() {
           </Container>
         </AppShell.Footer>
       </AppShell>
+      
       <SnowParticles />
     </>
   );
