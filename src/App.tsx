@@ -5,7 +5,9 @@ import ResortNavBar from './components/ResortNavBar';
 import WeatherReport from './components/WeatherReport';
 import HeaderComponent from './components/HeaderComponent';
 import SnowParticles from './components/SnowParticles';
+import InteractiveMap from './components/InteractiveMap';
 
+export type Coords = number[];
 export type Resorts = 'Snowbird' | 'Alta' | 'Brighton' | 'Solitude' | 'Park City' | 'Deer Valley';
 
 export function App() {
@@ -16,24 +18,29 @@ export function App() {
     setResort(resort)
   }
 
+  // return (
+  //   <InteractiveMap />
+  // );
+
   return (
     <>
-    <AppShell
-      header={{ height: 60 }}
-      navbar={{ width: 125, breakpoint: "xs" }}
-      padding="md"
-    >
-      <AppShell.Header>
-        <HeaderComponent resort={resort} />
-      </AppShell.Header>
+      <AppShell
+        header={{ height: 60 }}
+        navbar={{ width: 125, breakpoint: "xs" }}
+        padding="md"
+      >
+        <AppShell.Header>
+          <HeaderComponent resort={resort} />
+        </AppShell.Header>
 
-      <AppShell.Navbar p="md">
-        <ResortNavBar onResortSelect={handleResortSelect}/>
-      </AppShell.Navbar>
+        <AppShell.Navbar p="md">
+          <ResortNavBar onResortSelect={handleResortSelect} />
+        </AppShell.Navbar>
 
-      <AppShell.Main>
+        <AppShell.Main>
           <Grid gutter='lg'>
             <Grid.Col span={6}>
+              <InteractiveMap resort={resort}/>
               <WeatherReport resort={resort} />
             </Grid.Col>
 
@@ -41,16 +48,16 @@ export function App() {
               <LiveCam resort={resort} />
             </Grid.Col>
           </Grid>
-      </AppShell.Main>
-      <AppShell.Footer>
-        <Container>
-        <Anchor href="https://open-meteo.com/" target="_blank" underline="hover">
-          Weather data provided by Open-Meteo
-        </Anchor>
-        </Container>
-      </AppShell.Footer>
-    </AppShell>
-    <SnowParticles />
+        </AppShell.Main>
+        <AppShell.Footer>
+          <Container>
+            <Anchor href="https://open-meteo.com/" target="_blank" underline="hover">
+              Weather data provided by Open-Meteo
+            </Anchor>
+          </Container>
+        </AppShell.Footer>
+      </AppShell>
+      <SnowParticles />
     </>
   );
 }

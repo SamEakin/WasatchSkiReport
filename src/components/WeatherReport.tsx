@@ -63,7 +63,7 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
         }
     }
 
-    function snowfall(daily: WeatherResponse['daily']){
+    function renderSnowfall(daily: WeatherResponse['daily']){
         let rows = [];
         for (let i = 0; i < daily.time.length; i++){
             rows.push(
@@ -84,14 +84,14 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
      
     return (
         <Table>
-            <Table.Thead>
+            <Table.Thead> 
             <Table.Tr>
                 <Table.Th>Date</Table.Th>
                 <Table.Th>Snowfall (inches)</Table.Th>
             </Table.Tr>
             </Table.Thead>
             <Table.Tbody>
-                { snowfall(weather.daily) }
+                { renderSnowfall(weather.daily) }
             </Table.Tbody>
         </Table>   
     );
