@@ -20,15 +20,11 @@ export const Coordinates: Record<Resorts, Coords> = {
 
 export function App() {
 
-  const [resort, setResort] = useState<Resorts>('Snowbird');
+  const [resort, setResort] = useState<Resorts>('Solitude');
 
   function handleResortSelect(resort: Resorts) {
     setResort(resort)
   }
-
-  // return (
-  //   <InteractiveMap />
-  // );
 
   return (
     <>
