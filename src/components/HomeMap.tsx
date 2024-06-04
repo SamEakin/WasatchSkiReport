@@ -14,17 +14,17 @@ export default function HomeMap() {
 
 
     function findCenter() {
-        // Need to decide whether to use Average or Median...
         const xCoords = coordsArray.map(coords => coords[0]);
         const yCoords = coordsArray.map(coords => coords[1]);
-        // This returns the Average.
-        // return [xCoords.reduce((a, b) => a + b, 0) / xCoords.length, yCoords.reduce((a, b) => a + b, 0) / yCoords.length];
-        // This returns the Median.
         const xMax = Math.max(...xCoords);
         const xMin = Math.min(...xCoords);
         const yMax = Math.max(...yCoords);
         const yMin = Math.min(...yCoords);
-        return [ xMin + ((xMax - xMin)/2), yMin + ((yMax - yMin)/2) ];
+
+        // Need to decide whether to use Average or Median...
+        // const mean = [xCoords.reduce((a, b) => a + b, 0) / xCoords.length, yCoords.reduce((a, b) => a + b, 0) / yCoords.length];
+        const median = [ xMin + ((xMax - xMin)/2), yMin + ((yMax - yMin)/2) ]
+        return median;
     }
 
     function ResortMap() {
@@ -34,7 +34,7 @@ export default function HomeMap() {
     }
 
     return (
-        <MapContainer center={position} zoom={13} style={{ height: 536, zIndex: 1 }}>
+        <MapContainer center={position} zoom={12} style={{ height: 536, zIndex: 1 }}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -1,10 +1,10 @@
-import { Anchor, AppShell, Container } from '@mantine/core';
 import { useState } from 'react';
+import { Anchor, AppShell, Container } from '@mantine/core';
+import { Route, Routes } from 'react-router-dom';
 import ResortNavBar from '../components/ResortNavBar';
 import HeaderComponent from '../components/HeaderComponent';
 import ResortPage from './ResortPage';
-import { Route, Routes } from 'react-router-dom';
-import Home from './Home';
+import HomePage from './HomePage';
 
 export type Coords = number[];
 export type Resorts = 'Snowbird' | 'Alta' | 'Brighton' | 'Solitude' | 'Park City' | 'Deer Valley';
@@ -41,7 +41,7 @@ export function App() {
 
         <AppShell.Main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/:name" element={<ResortPage />} />
           </Routes>
         </AppShell.Main>
