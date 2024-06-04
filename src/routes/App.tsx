@@ -1,11 +1,11 @@
-import { Anchor, AppShell, Container, Grid } from '@mantine/core';
+import { Anchor, AppShell, Container } from '@mantine/core';
 import { useState } from 'react';
-import LiveCam from './components/LiveCam';
-import ResortNavBar from './components/ResortNavBar';
-import WeatherReport from './components/WeatherReport';
-import HeaderComponent from './components/HeaderComponent';
-import SnowParticles from './components/SnowParticles';
-import InteractiveMap from './components/InteractiveMap';
+import ResortNavBar from '../components/ResortNavBar';
+import HeaderComponent from '../components/HeaderComponent';
+import SnowParticles from '../components/SnowParticles';
+import ResortPage from './ResortPage';
+import { Route, Routes, Link } from 'react-router-dom';
+import Home from './Home';
 
 export type Coords = number[];
 export type Resorts = 'Snowbird' | 'Alta' | 'Brighton' | 'Solitude' | 'Park City' | 'Deer Valley';
@@ -42,16 +42,10 @@ export function App() {
         </AppShell.Navbar>
 
         <AppShell.Main>
-          <Grid gutter='lg'>
-            <Grid.Col span={6}>
-              <InteractiveMap resort={resort}/>
-              <WeatherReport resort={resort} />
-            </Grid.Col>
-
-            <Grid.Col offset={1} span={5}>
-              <LiveCam resort={resort} />
-            </Grid.Col>
-          </Grid>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/:name" element={<ResortPage />} />
+          </Routes>
         </AppShell.Main>
         <AppShell.Footer>
           <Container>
@@ -62,7 +56,7 @@ export function App() {
         </AppShell.Footer>
       </AppShell>
 
-      <SnowParticles />
+      {/* <SnowParticles /> */}
     </>
   );
 }

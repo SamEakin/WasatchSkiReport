@@ -1,7 +1,7 @@
 import { Table } from "@mantine/core";
 import axios from 'axios';
 import { useEffect, useState } from "react";
-import { Resorts, Coordinates } from "../App";
+import { Resorts, Coordinates } from "../routes/App";
 import WeatherReportSnowfallRow from "./WeatherReportSnowfallRow";
 
 type WeatherResponse = {

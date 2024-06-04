@@ -1,7 +1,7 @@
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
-import { Resorts, Coordinates } from "../App";
+import { Resorts, Coordinates } from "../routes/App";
 
 type InteractiveMapProps = {
     resort: Resorts
