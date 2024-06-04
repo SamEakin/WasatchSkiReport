@@ -8,7 +8,7 @@ import Home from './Home';
 
 export type Coords = number[];
 export type Resorts = 'Snowbird' | 'Alta' | 'Brighton' | 'Solitude' | 'Park City' | 'Deer Valley';
-export const Coordinates: Record<Resorts, Coords> = {
+export const coordinates: Record<Resorts, Coords> = {
   'Snowbird': [40.5819, -111.6557],
   'Alta': [40.5883, -111.6372],
   'Brighton': [40.5997, -111.5844],
@@ -19,9 +19,9 @@ export const Coordinates: Record<Resorts, Coords> = {
 
 export function App() {
 
-  const [resort, setResort] = useState<Resorts>('Solitude');
+  const [resort, setResort] = useState<Resorts | undefined>(undefined);
 
-  function handleResortSelect(resort: Resorts) {
+  function handleResortSelect(resort: Resorts | undefined) {
     setResort(resort)
   }
 
@@ -30,10 +30,9 @@ export function App() {
       <AppShell
         header={{ height: 60 }}
         navbar={{ width: 125, breakpoint: "xs" }}
-        padding="md"
-      >
+        padding="md">
         <AppShell.Header>
-          <HeaderComponent resort={resort} />
+          <HeaderComponent resort={resort} onResortSelect={handleResortSelect} />
         </AppShell.Header>
 
         <AppShell.Navbar p="md">

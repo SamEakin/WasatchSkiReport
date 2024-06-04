@@ -1,7 +1,7 @@
 import { Table } from "@mantine/core";
 import axios from 'axios';
 import { useEffect, useState } from "react";
-import { Resorts, Coordinates } from "../routes/App";
+import { Resorts, coordinates } from "../routes/App";
 import WeatherReportSnowfallRow from "./WeatherReportSnowfallRow";
 
 type WeatherResponse = {
@@ -46,7 +46,7 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
     }
 
     useEffect(() => {
-        fetch7daySnowfall(Coordinates[resort][0], Coordinates[resort][1])
+        fetch7daySnowfall(coordinates[resort][0], coordinates[resort][1])
     }, [resort]);
 
     if (weather === undefined) return ('no weather data');

@@ -1,7 +1,7 @@
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
-import { Resorts, Coordinates } from "../routes/App";
+import { Resorts, coordinates } from "../routes/App";
 
 type InteractiveMapProps = {
     resort: Resorts
@@ -10,7 +10,7 @@ export default function InteractiveMap({ resort }: InteractiveMapProps) {
     const [position, setPosition] = useState<any>([0, 0]);
 
     useEffect(() => {
-        setPosition(Coordinates[resort])
+        setPosition(coordinates[resort])
     }, [resort]);
 
     function ResortMap() {
