@@ -1,8 +1,7 @@
-import cx from 'clsx';
-import { Button, NavLink } from '@mantine/core';
+import {  NavLink } from '@mantine/core';
 import { useState } from 'react';
 import { Resorts } from 'src/routes/App';
-import { Link, useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 type ResortNavBarProps = {
     onResortSelect: (value: Resorts) => void;
@@ -23,8 +22,6 @@ export default function ResortNavBar({ onResortSelect }: ResortNavBarProps){
     return (
         resorts.map((resort) =>
             <NavLink
-                // component={Link}
-                // to={'/' + resort}
                 label={resort}
                 onClick={() => handleResortSelect(resort)}
             />

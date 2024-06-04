@@ -6,9 +6,7 @@ import { Resorts } from "../routes/App";
 import { useParams } from 'react-router-dom';
 
 export default function  ResortPage() {
-    // const { name } = useParams(); 
-
-    const name = 'Solitude'
+    const { name } = useParams(); 
 
     return (
         <Grid gutter='lg'>

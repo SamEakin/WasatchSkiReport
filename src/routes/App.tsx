@@ -2,9 +2,8 @@ import { Anchor, AppShell, Container } from '@mantine/core';
 import { useState } from 'react';
 import ResortNavBar from '../components/ResortNavBar';
 import HeaderComponent from '../components/HeaderComponent';
-import SnowParticles from '../components/SnowParticles';
 import ResortPage from './ResortPage';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './Home';
 
 export type Coords = number[];
