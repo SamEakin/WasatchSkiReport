@@ -1,2 +1,6 @@
 declare module "*.png"
 declare module "*.svg"
+declare module "*.pdf"
+declare module "*.json"
+declare module "*.geojson"
+declare module "*.css"

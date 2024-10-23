@@ -13,6 +13,7 @@
     "@mantine/core": "^7.5.1",
     "@mantine/form": "^7.5.1",
     "@mantine/hooks": "^7.5.1",
+    "@tabler/icons-react": "^3.19.0",
     "@tsparticles/engine": "^3.3.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.3.0",
@@ -20,6 +21,7 @@
     "clsx": "^2.1.1",
     "install": "^0.13.0",
     "leaflet": "^1.9.4",
+    "moment": "^2.30.1",
     "npm": "^10.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@mantine/charts": "^7.10.0",
+    "@types/geojson": "^7946.0.14",
     "@types/leaflet": "^1.9.12",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",

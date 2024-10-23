@@ -1,0 +1,143 @@
+﻿OBJECTID,RESORT,LIFT_NAME,TYPE,CAPACITY,BASE_ELEVATION,TOP_ELEVATION,COUNTY,Shape__Length
+1,Brighton Ski Resort,Great Western Express,Detachable Chair,4,8763,10456,Salt Lake,2478.80687672546
+2,Brighton Ski Resort,Explorer,Fixed Chair,4,8766,8888,Salt Lake,321.703565659039
+3,Brighton Ski Resort,Crest Express,Detachable Chair,4,8779,9970,Salt Lake,2240.65097783746
+4,Brighton Ski Resort,Milly Express,Detachable Chair,4,8747,9859,Salt Lake,1486.8427934486
+5,Brighton Ski Resort,Snake Creek Express,Detachable Chair,4,9173,10148,Salt Lake,1774.1511941106
+6,Brighton Ski Resort,Majestic,Fixed Chair,4,8786,9485,Salt Lake,1229.31183257506
+7,Solitude Mountain Resort,Link,Fixed Chair,2,8100,8245,Salt Lake,487.007755812085
+8,Solitude Mountain Resort,Moonbeam Express,Detachable Chair,4,8104,8770,Salt Lake,1160.33848097611
+9,Solitude Mountain Resort,Sunrise,Fixed Chair,3,8215,9016,Salt Lake,1262.96734933102
+10,Solitude Mountain Resort,Powder Horn,Detachable Chair,2,8678,9760,Salt Lake,1189.25369112349
+11,Solitude Mountain Resort,Summit,Fixed Chair,2,8786,10003,Salt Lake,1953.83432205214
+12,Solitude Mountain Resort,Eagle Express,Detachable Chair,4,8002,9327,Salt Lake,1856.68202202988
+13,Solitude Mountain Resort,Honeycomb Return,Fixed Chair,4,8468,9127,Salt Lake,512.893646744448
+14,Solitude Mountain Resort,Apex Express,Detachable Chair,4,8195,9032,Salt Lake,1158.7548679174
+15,Alta Ski Area,Transfer Tow,Rope Tow,,8537,8645,Salt Lake,990.227463955471
+16,Alta Ski Area,Wildcat,Fixed Chair,2,8546,9747,Salt Lake,1511.09705977855
+17,Alta Ski Area,Sugarloaf,Detachable Chair,4,9199,10505,Salt Lake,1935.01034726047
+18,Alta Ski Area,Supreme,Fixed Chair,3,9386,10462,Salt Lake,2026.4297970088
+19,Alta Ski Area,Sunnyside,Detachable Chair,3,8648,9439,Salt Lake,1847.76079176837
+20,Alta Ski Area,Albion,Fixed Chair,2,8651,9504,Salt Lake,1981.4223134842
+21,Alta Ski Area,Collins,Detachable Chair,4,8537,10371,Salt Lake,2448.12488019621
+22,Snowbird Ski and Summer Resort,Gad Zoom,Detachable Chair,4,7887,9705,Salt Lake,2590.2901658067
+23,Snowbird Ski and Summer Resort,Mid Gad,Fixed Chair,3,7890,9196,Salt Lake,1635.36342784016
+24,Snowbird Ski and Summer Resort,Wilbere,Fixed Chair,3,7976,8658,Salt Lake,810.962308790887
+25,Snowbird Ski and Summer Resort,Baby Thunder,Fixed Chair,2,7756,8389,Salt Lake,748.362780142684
+26,Snowbird Ski and Summer Resort,Tram,Tram,,8100,10945,Salt Lake,3167.25262446886
+27,Snowbird Ski and Summer Resort,Little Cloud,Fixed Chair,4,9527,10823,Salt Lake,1280.52892631684
+28,Snowbird Ski and Summer Resort,Mineral Basin Express,Detachable Chair,4,9527,10958,Utah,1273.44614095618
+29,Snowbird Ski and Summer Resort,Baldy Express,Detachable Chair,4,9580,10538,Utah,1412.26213337485
+30,Snowbird Ski and Summer Resort,Peruvian Express,Detachable Chair,4,8113,10508,Salt Lake,2994.44789235878
+31,Snowbird Ski and Summer Resort,Tunnel,Tunnel,,10538,10558,Salt Lake,233.601640026209
+32,Snowbird Ski and Summer Resort,Gad 2,Fixed Chair,4,8733,9974,Salt Lake,1526.61623587816
+33,Park City,Super Condor Express,Detachable Chair,4,7218,8980,Summit,2446.46723380114
+34,Park City,Sun Peak Express,Detachable Chair,4,7552,8600,Summit,1440.98864234945
+35,Park City,Red Pine Gondola,Gondola,8,6913,8028,Summit,2615.91457626149
+36,Park City,Short Cut,Fixed Chair,3,7949,8291,Summit,540.441712986041
+37,Park City,Orange Bubble Express,Detachable Chair,6,6900,8400,Summit,3481.28614501207
+38,Park City,Saddleback Express,Detachable Chair,4,8028,9117,Summit,1705.82364162021
+39,Park City,High Meadow,Fixed Chair,4,8031,8320,Summit,786.315439096287
+40,Park City,Motherlode Express,Detachable Chair,4,7969,9245,Summit,2051.73789062791
+41,Park City,Silverlode Express,Detachable Chair,6,7963,9255,Summit,2073.02690918182
+42,Park City,King Con Express,Detachable Chair,6,7274,8487,Summit,1729.44123298045
+43,Park City,Eagle,Fixed Chair,3,6913,8048,Summit,1393.057298019
+44,Park City,Three Kings,Fixed Chair,2,6903,7362,Summit,873.529041108565
+45,Park City,First Time,Detachable Chair,4,6909,7175,Summit,731.131605227675
+46,Park City,Town Lift,Fixed Chair,3,6995,8172,Summit,2597.04149116443
+47,Park City,Bonanza Express,Detachable Chair,6,8136,9242,Summit,2113.21211979563
+48,Park City,Thaynes,Fixed Chair,2,8517,9373,Summit,1038.09498194567
+49,Park City,Jupiter,Fixed Chair,2,8953,9970,Summit,1291.52304042422
+50,Park City,Ninety-Nine 90 Express,Detachable Chair,4,8300,9819,Summit,2020.89894440196
+51,Park City,Peak 5,Fixed Chair,4,8300,9308,Summit,1042.79352970929
+52,Park City,Day Break,Fixed Chair,3,8412,9219,Summit,1498.23145421672
+53,Park City,Dreamscape,Fixed Chair,4,8402,9275,Summit,1319.98384298652
+54,Park City,Dreamcatcher,Fixed Chair,4,7766,9281,Summit,1672.99758458689
+55,Park City,McConkey's Express,Detachable Chair,6,8501,9678,Summit,2077.57784571064
+56,Park City,Pioneer,Fixed Chair,3,8451,9413,Summit,1487.81008563688
+57,Park City,Tombstone Express,Detachable Chair,6,7208,8940,Summit,2586.87424453122
+58,Deer Valley Resort,Ruby Express,Detachable Chair,4,8340,9052,Summit,954.680269532162
+59,Deer Valley Resort,Northside Express,Detachable Chair,4,8156,9045,Summit,1427.82627245781
+60,Deer Valley Resort,Quincy Express,Detachable Chair,4,8048,9025,Summit,1577.80597646168
+61,Deer Valley Resort,Red Cloud,Fixed Chair,3,8045,8799,Summit,973.175832019271
+62,Deer Valley Resort,Silver Strike Express,Detachable Chair,4,8084,9062,Summit,2002.9554922278
+63,Deer Valley Resort,Empire Express,Detachable Chair,4,8337,9547,Summit,1846.39724881576
+64,Deer Valley Resort,Little Chief,Fixed Chair,3,8340,8507,Summit,315.694082326116
+65,Deer Valley Resort,Sterling Express,Detachable Chair,4,8133,9288,Summit,1819.34092620575
+66,Deer Valley Resort,Judge,Fixed Chair,3,8051,8232,Summit,262.549594702467
+67,Deer Valley Resort,Homestake,Fixed Chair,4,8130,8392,Summit,700.925486728539
+68,Deer Valley Resort,Carpenter Express,Detachable Chair,4,7221,8386,Summit,1887.1320558076
+69,Deer Valley Resort,Silver Lake Express,Detachable Chair,4,7224,8133,Summit,2566.85776313472
+70,Deer Valley Resort,Viking,Fixed Chair,3,8045,8166,Summit,232.654812110761
+71,Deer Valley Resort,Wasatch Express,Detachable Chair,4,7923,9301,Summit,1576.34139658436
+72,Deer Valley Resort,Crown Point,Fixed Chair,3,7920,8468,Summit,508.933788156747
+73,Deer Valley Resort,Sultan Express,Detachable Chair,4,7543,9291,Summit,1842.91443234322
+74,Deer Valley Resort,Burns,Fixed Chair,2,7221,7372,Summit,361.141746764194
+75,Deer Valley Resort,Snowflake,Fixed Chair,2,7234,7379,Summit,438.828624552767
+76,Deer Valley Resort,Jordanelle Express Gondola,Gondola,4,6598,7930,Summit,2039.96777391585
+77,Deer Valley Resort,Deer Crest,Fixed Chair,4,7073,7936,Summit,1154.74509412205
+78,Deer Valley Resort,Mayflower,Fixed Chair,3,7418,8806,Summit,1309.80842556253
+79,Deer Valley Resort,Lady Morgan Express,Detachable Chair,4,7821,9068,Summit,1239.04244559976
+80,Park City,Payday,Detachable Chair,6,6985,8248,Summit,2278.95100143955
+81,Park City,Silver Star,Fixed Chair,3,6896,7674,Summit,1153.36973091521
+82,Park City,Cresent Express,Detachable Chair,4,7037,8747,Summit,2799.96941823267
+83,Brian Head Resort,Giant Steps Express,Detachable Chair,4,9764,10899,Iron,1800.39241424015
+84,Brian Head Resort,Blackfoot,Fixed Chair,3,9751,10180,Iron,862.44141539345
+85,Brian Head Resort,The Dunes,Fixed Chair,3,10357,10905,Iron,956.923451578644
+86,Beaver Mountain Resort,Beaver's Face,Fixed Chair,2,7234,8241,Cache,1161.61291613789
+87,Beaver Mountain Resort,Little Beaver,Fixed Chair,2,7224,7536,Cache,606.239211305471
+88,Beaver Mountain Resort,Little Dogie,Fixed Chair,2,7165,7454,Cache,423.428995057008
+89,Beaver Mountain Resort,Harry's Dream,Fixed Chair,3,7274,8756,Cache,1728.75135064735
+90,Beaver Mountain Resort,Marge's Triple,Fixed Chair,3,7539,8599,Cache,1676.70864819152
+91,Alta Ski Area,Lodge Tow,Rope Tow,,8533,8599,Salt Lake,178.726714008536
+92,Alta Ski Area,Rustler,Fixed Chair,3,8566,8635,Salt Lake,171.834358925989
+93,Alta Ski Area,Grizzly Tow,Rope Tow,,8596,8678,Salt Lake,212.097590327996
+94,Snowbird Ski and Summer Resort,Chickadee,Fixed Chair,2,8110,8235,Salt Lake,288.803285377867
+95,Sundance Resort,Ray's,Fixed Chair,4,6100,7390,Utah,1920.71115422382
+96,Sundance Resort,Arrowhead,Fixed Chair,4,6972,8241,Utah,1567.72244598468
+97,Sundance Resort,Flathead,Fixed Chair,4,6621,7693,Utah,863.988084721537
+98,Sundance Resort,Handle Tow,Rope Tow,,6115,6197,Utah,277.156302658745
+99,Park City,Sunrise,Fixed Chair,2,6939,7392,Summit,806.328650043848
+100,Park City,Cabriolet,Gondola,6,6726,6913,Summit,1055.02935690217
+101,Brian Head Resort,Roulette,Fixed Chair,3,10059,10807,Iron,1137.03307532865
+102,Snowbasin Resort,Allen Peak Tram,Tram,,8832,9360,Weber,429.578816148217
+103,Snowbasin Resort,John Paul Express,Detachable Chair,4,6407,8825,Weber,2910.07432679282
+104,Snowbasin Resort,Needle Express Gondola,Gondola,8,6407,8720,Weber,3700.61102204605
+105,Snowbasin Resort,Wildcat,Fixed Chair,3,6555,7917,Weber,1940.27105226301
+106,Snowbasin Resort,Becker,Fixed Chair,3,6558,7808,Weber,2225.63717782547
+107,Snowbasin Resort,Middle Bowl,Fixed Chair,3,7572,8707,Weber,1737.23675940444
+108,Snowbasin Resort,Porcupine,Fixed Chair,3,7218,8711,Weber,2497.0737527063
+109,Snowbasin Resort,Littlecat Express,Detachable Chair,4,6407,6647,Weber,532.617177389803
+110,Powder Mountain,Hidden Lake Express,Detachable Chair,4,7638,8901,Cache,2195.02769078796
+111,Powder Mountain,Timberline,Fixed Chair,3,7926,8717,Cache,1307.90285145782
+112,Powder Mountain,Sundown,Fixed Chair,2,8058,8609,Weber,773.650380912491
+113,Powder Mountain,Paradise,Fixed Chair,4,6906,8501,Cache,2251.36223090283
+114,Powder Mountain,Tiger,Surface,,8064,8189,Weber,249.220390325539
+115,Powder Mountain,Sunrise,Platter Tow,1,8727,8858,Cache,578.123704392625
+116,Powder Mountain,Saddle Horn,Surface,,8606,8648,Weber,326.699862956558
+117,Park City,Iron Mountain Express,Detachable Chair,4,7215,8710,Summit,2051.10328382371
+118,Park City,Timberline,Fixed Chair,4,7210,7215,Summit,859.79337676234
+119,Park City,Flat Iron,Fixed Chair,2,8320,8345,Summit,999.258925660456
+120,Park City,Frostwood Gondola,Pulse Gondola,6,6745,6910,Summit,742.565667675901
+121,Eagle Point,Lookout,Fixed Chair,4,9330,10275,Beaver,1280.31730341034
+122,Eagle Point,Canyonside,Fixed Chair,2,9335,9600,Beaver,301.386966525519
+123,Eagle Point,Monarch,Fixed Chair,3,10135,10575,Beaver,871.814499235984
+124,Eagle Point,Skyline,Fixed Chair,2,9940,10360,Beaver,1079.27638865811
+125,Brian Head Resort,Pioneer,Fixed Chair,2,9600,9745,Iron,405.919071709979
+126,Brian Head Resort,Navajo,Fixed Chair,3,9640,10230,Iron,1472.41279964618
+127,Brian Head Resort,Wildflower,Fixed Chair,3,9810,10380,Iron,1096.45260838773
+128,Brian Head Resort,Alpen Glow,Fixed Chair,3,9820,10365,Iron,912.567385427527
+129,Snowbasin Resort,Strawberry Express,Detachable Gondola,8,6750,9225,Weber,3703.81462052222
+130,Nordic Valley,Sterling,Fixed Chair,,5365,5680,Weber,699.259724509846
+131,Nordic Valley,Wolfdeedo,Fixed Chair,,5360,5600,Weber,540.244115654925
+132,Nordic Valley,Howling Wolf,Fixed Chair,,5385,6320,Weber,1129.25530456287
+133,Cherry Peak,Gateway,Fixed Chair,3,5815,6370,Cache,721.656851238175
+134,Cherry Peak,Summit,Fixed Chair,3,6315,7005,Cache,930.244577476938
+135,Park City,Quicksilver Gondola,Gondola,8,7980,8370,Summit,3034.61298036804
+136,Cherry Peak,Vista,Fixed Chair,2,6210,6580,Cache,578.311213830302
+137,Cherry Peak,Little Bit,Fixed Chair,2,5835,5935,Cache,359.734424004401
+138,Park City,Eaglet,Fixed Chair,3,8040,8290,Summit,546.198874647313
+139,Sundance Resort,Jake's,Fixed Chair,4,6290,6930,Utah,1031.41484918985
+140,Powder Mountain,Village,Detachable Chair,4,8070,8645,Weber,1484.33003159903
+141,Powder Mountain,Mary's,Detachable Chair,4,8024,8888,Weber,1574.71908272901
+142,Sundance Resoirt,Stairway,Fixed Chair,4,6975,7400,Utah,353.23657350357

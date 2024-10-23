@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import { Resorts, coordinates } from "../routes/App";
 import WeatherReportSnowfallRow from "./WeatherReportSnowfallRow";
+import StatsSegments from './SegmentedStats';
 
 type WeatherResponse = {
     latitude: number,
@@ -28,12 +29,25 @@ type WeatherReportProps = {
 export default function WeatherReport({ resort }: WeatherReportProps) {
     const [weather, setWeather] = useState<WeatherResponse>();
 
-    async function fetch7daySnowfall(latitude: number, longitude: number) {
+    async function fetchSnowfallHistory(latitude: number, longitude: number, start_date: string, end_date: string) {
         try {
-            const endpoint = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=snowfall_sum&timezone=America%2FDenver&past_days=7&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch`
+            const start_date = '2024-03-01'
+            const end_date = '2024-03-31'
+            const endpoint = `https://archive-api.open-meteo.com/v1/archive?latitude=${latitude}&longitude=${longitude}&start_date=${start_date}&end_date=${end_date}&daily=snowfall_sum&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FDenver`
             const response = await axios.get(endpoint);
             const data = response.data as WeatherResponse;
-            console.log(data)
+
+
+        } catch(error) {
+            console.error(error)
+        }
+    }
+
+    async function fetchSnowfall(latitude: number, longitude: number, past_days: number) {
+        try {
+            const endpoint = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=snowfall_sum&timezone=America%2FDenver&past_days=${past_days}&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch`
+            const response = await axios.get(endpoint);
+            const data = response.data as WeatherResponse;
             setWeather(data)
         } catch (error) {
             console.error(error)
@@ -41,18 +55,19 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
     }
 
     function totalSnowfall(snowfall_sum: number[]): string {
-        console.log(snowfall_sum)
         return snowfall_sum.reduce((a, b) => a + b, 0).toFixed(2)
     }
 
     useEffect(() => {
-        fetch7daySnowfall(coordinates[resort][0], coordinates[resort][1])
+        let past_days = 7
+        fetchSnowfall(coordinates[resort][0], coordinates[resort][1], past_days)
     }, [resort]);
 
     if (weather === undefined) return ('no weather data');
 
     return (
         <>
+            <StatsSegments weather={weather}/>
             <Table>
                 <Table.Thead>
                     <Table.Tr>
@@ -64,10 +79,12 @@ export default function WeatherReport({ resort }: WeatherReportProps) {
                     </Table.Tr>
                 </Table.Thead>
                 <Table.Tbody>
-                    <Table.Td>{weather.elevation}</Table.Td>
-                    <Table.Td>{weather.latitude}</Table.Td>
-                    <Table.Td>{weather.longitude}</Table.Td>
-                    <Table.Td>{totalSnowfall(weather.daily.snowfall_sum)}</Table.Td>
+                    <Table.Tr>
+                        <Table.Td>{weather.elevation}</Table.Td>
+                        <Table.Td>{weather.latitude}</Table.Td>
+                        <Table.Td>{weather.longitude}</Table.Td>
+                        <Table.Td>{totalSnowfall(weather.daily.snowfall_sum)}</Table.Td>
+                    </Table.Tr>
                 </Table.Tbody>
             </Table>
 

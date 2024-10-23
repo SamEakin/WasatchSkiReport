@@ -11,7 +11,7 @@ export default function ResortNavBar({ onResortSelect }: ResortNavBarProps){
     const [active, setActive] = useState(0);
     const navigate = useNavigate();
 
-    const resorts: Resorts[] = ['Alta', 'Brighton', 'Solitude', 'Deer Valley', 'Park City', 'Snowbird']
+    const resorts: Resorts[] = ['Alta', 'Brighton', 'Solitude', 'Deer Valley', 'Park City', 'Snowbird', 'Mt. Everest', 'Saas Fee']
     
     function handleResortSelect(resort: Resorts) {
         onResortSelect(resort)
@@ -22,6 +22,7 @@ export default function ResortNavBar({ onResortSelect }: ResortNavBarProps){
     return (
         resorts.map((resort) =>
             <NavLink
+                key={resort} 
                 label={resort}
                 onClick={() => handleResortSelect(resort)}
             />
